@@ -1,53 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// class Categories extends React.Component {
-//   state = {
-//     activeItem: 3,
-//   };
-
-//   onSelectItem = (index) => {
-//     this.setState({
-//       activeItem: index,
-//     });
-//   };
-
-//   render() {
-//     const { items, onClickItem } = this.props;
-//     return (
-//       <div className="categories">
-//         <ul>
-//           <li>Всі</li>
-//           {items.map((category, index) => (
-//             <li
-//               className={this.state.activeItem === index ? 'active' : ''}
-//               onClick={() => this.onSelectItem(index)}
-//               key={`${category}_${index}`}>
-//               {category}
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
-
-function Categories({ items, onClickItem }) {
-  const [activeItem, setActiveItem] = useState(null);
-
-  const onSelectItem = (index) => {
-    setActiveItem(index);
-  };
+const Categories = React.memo(function Categories({ activeCategory, items, onClickCategory }) {
 
   return (
     <div className="categories">
       <ul>
-        <li className={activeItem === null ? 'active' : ''} onClick={() => onSelectItem(null)}>
+        <li className={activeCategory === null ? 'active' : ''} onClick={() => onClickCategory(null)}>
           Всі
         </li>
         {items?.map((category, index) => (
           <li
-            className={activeItem === index ? 'active' : ''}
-            onClick={() => onSelectItem(index)}
+            className={activeCategory === index ? 'active' : ''}
+            onClick={() => onClickCategory(index)}
             key={`${category}_${index}`}>
             {category}
           </li>
@@ -55,6 +20,17 @@ function Categories({ items, onClickItem }) {
       </ul>
     </div>
   );
-}
+});
+
+Categories.propTypes = {
+  activeCategory: PropTypes.oneOf([PropTypes.number, null]),
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onClickCategory: PropTypes.func,
+};
+
+Categories.defaultProps = {
+  activeCategory: null,
+  items: [],
+};
 
 export default Categories;
