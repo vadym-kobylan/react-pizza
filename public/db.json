@@ -3,7 +3,7 @@
     {
       "id": 0,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-      "name": "Папероні Фреш з перцем",
+      "name": "Пепероні Фреш з перцем",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 220,
@@ -99,6 +99,16 @@
       "price": 167,
       "category": 5,
       "rating": 7
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/5ac90c81176047ceb1a10f7ed57eef2e_1875x1875.png",
+      "name": "Дід Денис",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 112,
+      "category": 0,
+      "rating": 10
     }
   ]
 }

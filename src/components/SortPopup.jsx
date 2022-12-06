@@ -3,7 +3,7 @@ import { React, useEffect, useState, useRef } from 'react';
 function SortPopup({ items, onClickSortType, activeSortType }) {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const sortRef = useRef();
-  const activeLabel = items.find(obj => obj.type === activeSortType).name ;
+  const activeLabel = items.find((obj) => obj.type === activeSortType).name;
 
   const toggleVisiblePopup = () => {
     setVisiblePopup(!visiblePopup);
@@ -51,7 +51,7 @@ function SortPopup({ items, onClickSortType, activeSortType }) {
           <ul>
             {items?.map((obj, index) => (
               <li
-                onClick={() => onSelectItem(obj.type)}
+                onClick={() => onSelectItem(obj)}
                 className={activeSortType === obj.type ? 'active' : ''}
                 key={`${obj.type}_${index}`}>
                 {obj.name}

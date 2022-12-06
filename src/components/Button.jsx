@@ -8,7 +8,7 @@ const Button = ({ onClick, className, outline, children }) => {
       className={classNames('button', className, {
         'button--outline': outline,
       })}>
-      {children} 
+      {children}
     </button>
   );
 };
