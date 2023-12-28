@@ -40,12 +40,12 @@ function Cart() {
   }
 
   return (
-    <div className="content">
+    <div className="contentCart">
       <div className="container container--cart">
         {totalCount ? (
           <div className="cart">
             <div className="cart__top">
-              <h2 className="content__title">
+              <h2 className="contentCart__title">
                 <svg
                   width="18"
                   height="18"
@@ -116,7 +116,7 @@ function Cart() {
                 <span onClick={onClearCart}>Очистити кошик</span>
               </div>
             </div>
-            <div className="content__items">
+            <div className="contentCart__items">
               {addedPizzas.map((obj, index) => (
                 <CartItem
                   key={obj.id}

@@ -11,9 +11,7 @@ export const fetchPizzas =
     dispatch(setLoaded(false));
     axios
       .get(
-        `/pizzas?${
-          category !== null ? `category=${category}` : ''
-        }&_sort=${type}&_order=${order}`,
+        `https://json-server-react-pizza.vercel.app/pizzas?${category !== null ? `category=${category}` : ''}&_sort=${type}&_order=${order}`,
       )
       .then(({ data }) => {
         dispatch(setPizzas(data));

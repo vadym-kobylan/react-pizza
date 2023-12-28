@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
+    "sass": "^1.62.1",
     "sass-loader": "^7.1.0",
     "web-vitals": "^2.1.4",
     "webpack": "^4.19.1",
@@ -48,8 +49,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "node-sass": "^7.0.3"
+    "cross-env": "^7.0.3"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "https://json-server-react-pizza.vercel.app/"
 }

@@ -18,7 +18,7 @@ body {
   max-width: 1400px;
 }
 
-.content {
+.contentCart {
   padding: 40px 0;
 
   &__title {
@@ -37,6 +37,29 @@ body {
     justify-content: space-between;
   }
 }
+
+
+.content {
+  padding: 40px 0;
+
+  &__title {
+    margin: 35px 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 70px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
 
 .container {
   width: $container-width;
